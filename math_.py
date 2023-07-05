@@ -145,3 +145,57 @@
 #     S = init_lst[1:]
 #     dfs(S)
 #     print()
+
+# 2407
+
+
+# def fact(n):
+#     num = 1
+#     for i in range(2, n + 1):
+#         num *= i
+#     return num
+
+
+# n, m = map(int, input().split())
+# print(fact(n) // (fact(m) * fact(n - m)))
+
+# 10974
+
+# lst = []
+
+
+# def dfs(N):
+#     if len(lst) == N:
+#         print(" ".join(map(str, lst)))
+#         return
+
+#     for i in range(1, N + 1):
+#         if i not in lst:
+#             lst.append(i)
+#             dfs(N)
+#             lst.pop()
+
+
+# N = int(input())
+# dfs(N)
+
+# #2824
+# import math
+
+# N = int(input())
+# N_list = list(map(int, input().split()))
+# M = int(input())
+# M_list = list(map(int, input().split()))
+
+# A = 1
+# for i in N_list:
+#     A *= i
+# B = 1
+# for i in M_list:
+#     B *= i
+
+# result = str(math.gcd(A, B))
+# if len(result) > 9:
+#     print(result[-9:])
+# else:
+#     print(result)
