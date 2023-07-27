@@ -199,3 +199,53 @@
 #     print(result[-9:])
 # else:
 #     print(result)
+
+# 1182
+# N, S = map(int, input().split())
+# num_lst = list(map(int, input().split()))
+
+# lst = []
+# cnt = 0
+
+
+# def dfs(num):
+#     global cnt
+#     flag = 0
+#     if len(lst) == num:
+#         for i in range(len(lst) - 1):
+#             if lst[i] > lst[i + 1]:
+#                 flag = 1
+#         if flag == 0:
+#             if sum(lst) == S:
+#                 cnt += 1
+#         return
+#     for i in num_lst:
+#         if i not in lst:
+#             lst.append(i)
+#             dfs(num)
+#             lst.pop()
+
+
+# for i in range(1, N + 1):
+#     dfs(i)
+
+# print(cnt)
+
+# 17103
+# import sys
+
+# num = 10000001
+# arr = [True for _ in range(num)]
+# for i in range(2, int((num - 1) ** 0.5) + 1):
+#     if arr[i]:
+#         for k in range(i + i, num, i):
+#             arr[k] = False
+
+# num = int(sys.stdin.readline())
+# for _ in range(num):
+#     goldbach = int(sys.stdin.readline())
+#     cnt = 0
+#     for i in range(goldbach // 2, 1, -1):
+#         if arr[i] & arr[goldbach - i]:
+#             cnt += 1
+#     print(cnt)
